@@ -2,7 +2,7 @@
 
 Here, we define and contrast common terms used to label different concepts within the DARPA ASKEM program and the Terarium HMI.
 
-## Model | Simulation
+## Model | Simulation | Framework | Semantic
 
 * A `model` is an abstract representation of a system with the purpose of approximating its behaviours,
 e.g. an epidemic can be approximated by a model built from a set of ordinary differential equations.
@@ -13,6 +13,18 @@ What makes a model executable depends on the details of the model, the simulator
 * A `simulator` is an program that takes a model and corresponding input values and generates output values.
 
 * `Modeling` is the process of building a model or a simulation.
+
+* A modeling `framework` is [...]. 
+Examples include `Petri nets`, `gene regulatory networks` (regnets), and `agent-based models` (ABMs). 
+The schema of their JSON serialization is specified in the [ASKEM Model Representations](https://github.com/DARPA-ASKEM/Model-Representations) repository.
+
+| Model Frameworks         | Description |
+|:-------------------------|:------------|
+| Petri nets               | ...         |
+| Gene regulatory networks | ...         |
+| Agent-based models       | ...         |
+
+* `Semantic` [...]
 
 ## Scenarios | Configurations | Runs | Results
 
