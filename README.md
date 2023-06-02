@@ -84,7 +84,7 @@ e.g. assuming the SIR compartmental model and a training dataset with features `
 
 ## Fitting | Training | Calibration | Optimization
 
-* Model `fitting` — synonymous with `inference`, `training`, and `calibration` — is the process for determining or updating the value (point estimate or posterior distribution) of model parameters 
+* Model `fitting` — a form of statistical inference synonymous with `training` and `calibration` — is the process for determining or updating the value (point estimate or posterior distribution) of model parameters 
 in light of a reference dataset of observations. 
 The result is typically selected to balance tradeoffs between consistency with the modeler's expert knowledge and the "fit" of model observables to the dataset.
 In advanced cases, other selection criteria can include robustness to model misspecification, interpretability, focus on one statistical quantity of interest, and data privacy and security.
