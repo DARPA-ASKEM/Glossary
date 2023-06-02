@@ -14,17 +14,25 @@ What makes a model executable depends on the details of the model, the simulator
 
 * `Modeling` is the process of building a model or a simulation.
 
-* A modeling `framework` is [...]. 
+* A modeling `framework` has three components, the language of representing model structures, the class of mathematical objects that models can represent, and the process of taking a model structure and constructing the mathematical object it represents.
+
+* Model `syntax` is a system for describing models. Syntax can be grammatical or linguistic using term trees like `x -> x*x + 3` or combinatorial/graphical like `S -> [beta] -> I`. If the terms in the syntax are trees, then we can often think of the modeling language as a type of program. If the syntax is graphical, this intuition is less helpful.
+
+* Model `semantics` refers to the meaning of the model. This meaning is a mathematical object like a function between sets (`y = f(x)`), or a dynamical system (`u' = f(u)`). Note: in order to put the semantics in a written document, you have to use a syntax. This is just a requirement of writing, when we say the dynamical system `u' = f(u)`, we mean the vector field that expression refers to, not the expression itself.
+
+* The modeling framework is an association between model structures expressed in the syntax system and mathematical interpretations. 
+ 
 Examples include `Petri nets`, `gene regulatory networks` (regnets), and `agent-based models` (ABMs). 
 The schema of their JSON serialization is specified in the [ASKEM Model Representations](https://github.com/DARPA-ASKEM/Model-Representations) repository.
 
-| Model Frameworks         | Description |
-|:-------------------------|:------------|
-| Petri nets               | ...         |
-| Gene regulatory networks | ...         |
-| Agent-based models       | ...         |
-
-* `Semantic` [...]
+| Model Frameworks         | Description | Syntax      | Semantics   |
+|:-------------------------|:------------|:------------|:------------|
+| Mass Action Kinetics     | The chemical theory of interacting particles | Petri nets | Dynamical Systems |
+| Chemical Reaction Nets     | More realistic models of chemical reactions | Petri nets + Formulas | Dynamical Systems |
+| Lotka-Volterra Networks  | Networks of binary interactions of upregulating and downregulating | Signed Graphs | Dynamical Systems |
+| Biochemical Gene Regulatory Networks  | Networks of binary interactions of upregulating and downregulating | Signed Graphs + Real-valued Formulas | Dynamical Systems |
+| Logical Gene Regulatory Networks  | Networks of binary interactions of upregulating and downregulating | Signed Graphs + Boolean Formulas | Polynomials over finite fields |
+| Agent-based models       | Simulations based on interacting networks of agents         | Rewriting Rules and a Schedule | Computer Programs |
 
 ## Scenarios | Configurations | Runs | Results
 
