@@ -18,7 +18,7 @@ What makes a model executable depends on the details of the model, the simulator
 Examples include `Petri nets`, `gene regulatory networks` (regnets), and `agent-based models` (ABMs). 
 The schema of their JSON serialization is specified in the [ASKEM Model Representations](https://github.com/DARPA-ASKEM/Model-Representations) repository.
 
-| Model Frameworks         | Description |
+| Modeling Frameworks         | Description |
 |:-------------------------|:------------|
 | Petri nets               | ...         |
 | Gene regulatory networks | ...         |
@@ -54,6 +54,12 @@ e.g. `loss`, `penalty`, `tol`, etc. of the [stochastic gradient descent algorith
 
 * An `initial condition` is a parameter that corresponds to the value of a state variable at the starting time point; in a given model, there are as many initial conditions as state variables;
 e.g. `S₀`, `I₀`, `R₀` are the initial conditions of the SIR compartmental model.
+
+## Units | Dimensions
+
+* `Units`
+
+* `Dimensions`
 
 ## Observables | Observation Functions | Alignments
 
@@ -92,6 +98,14 @@ In advanced cases, other selection criteria can include robustness to model miss
 * `Optimization` is the process of determining the values of some variable(s) that minimize or maximize some objective(s) subject to some constraints. In the ASKEM context, these variables typically represent possible `interventions` to achieve a desired outcome, e.g. duration of a masking policy with respect to minimizing the number of hospitalized individuals. In the case of "risk-based optmization under uncertainty" (RBOUU), the objectives and constraints may be functions of distributions of model parameters and outputs, e.g. the constraint that the probability of a superspreader event never exceeds some threshold value.
 
 * Note that `fitting` *can* involve optimization (e.g. "optimal fitting" and "constrained optimal fitting") but *not* necessarily (e.g. approximation with a "particle filter").
+
+## Training | Validation | Testing
+
+* `Training`
+
+* `Validation`
+
+* `Testing`
 
 ## Interventions | Assumptions
 
