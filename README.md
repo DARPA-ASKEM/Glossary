@@ -34,6 +34,11 @@ The schema of their JSON serialization is specified in the [ASKEM Model Represen
 | Logical Gene Regulatory Networks  | Networks of binary interactions of upregulating and downregulating | Signed Graphs + Boolean Formulas | Polynomials over finite fields |
 | Agent-based models       | Simulations based on interacting networks of agents         | Rewriting Rules and a Schedule | Computer Programs |
 
+Within the context of the ASKEM Model representations, the `semantics` block holds additional data about a model that is necessary to apply the framework's main construction to build an interpretation of the model.
+This approach is used because there is often a core combinatorial syntax that will be shared by many different frameworks, with different attribute data necessary to interpret the model as a specific mathematical object.
+To avoid having a proliferation of similar framworks, this approach of factoring the core combinatorial syntax out from the additional interpretive attributes was chosen.
+
+
 ## Scenarios | Configurations | Runs | Results
 
 * A `scenario` is a natural-language description of the context, problems, or questions that is the starting point of the modeling and simulation process.
@@ -62,6 +67,12 @@ e.g. `loss`, `penalty`, `tol`, etc. of the [stochastic gradient descent algorith
 
 * An `initial condition` is a parameter that corresponds to the value of a state variable at the starting time point; in a given model, there are as many initial conditions as state variables;
 e.g. `S₀`, `I₀`, `R₀` are the initial conditions of the SIR compartmental model.
+
+## Units | Dimensions
+
+* `Units`
+
+* `Dimensions`
 
 ## Observables | Observation Functions | Alignments
 
@@ -100,6 +111,14 @@ In advanced cases, other selection criteria can include robustness to model miss
 * `Optimization` is the process of determining the values of some variable(s) that minimize or maximize some objective(s) subject to some constraints. In the ASKEM context, these variables typically represent possible `interventions` to achieve a desired outcome, e.g. duration of a masking policy with respect to minimizing the number of hospitalized individuals. In the case of "risk-based optmization under uncertainty" (RBOUU), the objectives and constraints may be functions of distributions of model parameters and outputs, e.g. the constraint that the probability of a superspreader event never exceeds some threshold value.
 
 * Note that `fitting` *can* involve optimization (e.g. "optimal fitting" and "constrained optimal fitting") but *not* necessarily (e.g. approximation with a "particle filter").
+
+## Training | Validation | Testing
+
+* `Training`
+
+* `Validation`
+
+* `Testing`
 
 ## Interventions | Assumptions
 
